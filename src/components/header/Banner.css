@@ -7,7 +7,7 @@
   background-image: url("https://images.unsplash.com/photo-1534796636912-3b95b3ab5986?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2971&q=80");
 }
 
-#logout {
+#banner-logout {
   align-self: end;
   margin-right: 1rem;
   padding-top: 0.5rem;
@@ -19,4 +19,11 @@
 
 #banner-logo {
   margin-bottom: 1rem;
+}
+
+.banner-link {
+  text-decoration: none;
+  font-family: "Quicksand", sans-serif;
+  letter-spacing: 1px;
+  color: white;
 }

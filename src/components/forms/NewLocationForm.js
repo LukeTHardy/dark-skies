@@ -3,18 +3,19 @@ import "./Forms.css";
 import { getStates } from "../../services/StatesService";
 import { postLocation } from "../../services/LocationsService";
 
-export const NewLocationForm = () => {
+export const NewLocationForm = ({ currentUser }) => {
   const [states, setStates] = useState([]);
   const [newLocation, setNewLocation] = useState({
     name: "",
     imageUrl: "",
     city: "",
-    stateId: null,
+    stateId: null, // You gotta make this real before seeding the database then you're ready
     address: "",
     latitude: null,
     longitude: null,
     bortle: null,
     comments: "",
+    userId: currentUser.id,
   });
 
   useEffect(() => {
@@ -32,11 +33,24 @@ export const NewLocationForm = () => {
   const handleSave = (e) => {
     // e.preventDefault();
 
-    const newLocObj = { ...newLocation };
-    newLocObj.stateId = parseInt(newLocObj.stateId);
-    newLocObj.latitude = parseFloat(newLocObj.latitude);
-    newLocObj.longitude = parseFloat(newLocObj.longitude);
-    newLocObj.bortle = parseInt(newLocObj.bortle);
+    const newLocObj = {
+      name: newLocation.name,
+      imageUrl: newLocation.imageUrl,
+      city: newLocation.city,
+      stateId: parseInt(newLocation.stateId),
+      address: newLocation.address,
+      latitude: parseFloat(newLocation.latitude),
+      longitude: parseFloat(newLocation.longitude),
+      bortle: parseInt(newLocation.bortle),
+      comments: newLocation.comments,
+      userId: newLocation.userId,
+    };
+
+    // const newLocObj = { ...newLocation };
+    // newLocObj.stateId = parseInt(newLocObj.stateId);
+    // newLocObj.latitude = parseFloat(newLocObj.latitude);
+    // newLocObj.longitude = parseFloat(newLocObj.longitude);
+    // newLocObj.bortle = parseInt(newLocObj.bortle);
 
     postLocation(newLocObj);
   };
@@ -86,10 +100,9 @@ export const NewLocationForm = () => {
       <fieldset>
         <div className="form-group">(State Dropdown)</div>
         <select
-          name="categoryId"
-          // onChange={handleInputChange}
-          value={newLocation.stateId}
+          name="stateId"
           onChange={handleInputChange}
+          value={newLocation.stateId}
         >
           <option value={0}>Please select a state</option>
           {states.map((statesObj) => {
