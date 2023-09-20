@@ -9,13 +9,13 @@ export const NewLocationForm = ({ currentUser }) => {
     name: "",
     imageUrl: "",
     city: "",
-    stateId: null, // You gotta make this real before seeding the database then you're ready
+    stateId: 0,
     address: "",
-    latitude: null,
-    longitude: null,
-    bortle: null,
+    latitude: 0,
+    longitude: 0,
+    bortle: 0,
     comments: "",
-    userId: currentUser.id,
+    userId: 0,
   });
 
   useEffect(() => {
@@ -43,7 +43,7 @@ export const NewLocationForm = ({ currentUser }) => {
       longitude: parseFloat(newLocation.longitude),
       bortle: parseInt(newLocation.bortle),
       comments: newLocation.comments,
-      userId: newLocation.userId,
+      userId: currentUser.id,
     };
 
     // const newLocObj = { ...newLocation };
@@ -98,7 +98,7 @@ export const NewLocationForm = ({ currentUser }) => {
         </div>
       </fieldset>
       <fieldset>
-        <div className="form-group">(State Dropdown)</div>
+        <div className="form-group">State</div>
         <select
           name="stateId"
           onChange={handleInputChange}
@@ -161,7 +161,7 @@ export const NewLocationForm = ({ currentUser }) => {
             name="bortle"
             type="text"
             className="form-control"
-            placeholder="Bortle scale #"
+            placeholder="Bortle scale #1-10"
             onChange={handleInputChange}
           />
         </div>
