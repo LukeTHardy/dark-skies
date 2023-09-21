@@ -53,6 +53,7 @@ export const EditLocation = () => {
         <div className="form-group">
           <label htmlFor="name">Name:</label>
           <input
+            id="name"
             name="name"
             value={location.name ? location.name : ""}
             type="text"
@@ -70,6 +71,7 @@ export const EditLocation = () => {
         <div className="form-group">
           <label htmlFor="imageUrl">Image URL:</label>
           <input
+            id="imageUrl"
             name="imageUrl"
             value={location.imageUrl ? location.imageUrl : ""}
             type="text"
@@ -87,6 +89,7 @@ export const EditLocation = () => {
         <div className="form-group">
           <label htmlFor="city">City:</label>
           <input
+            id="city"
             name="city"
             value={location.city ? location.city : ""}
             type="text"
@@ -127,6 +130,7 @@ export const EditLocation = () => {
         <div className="form-group">
           <label htmlFor="address">Address:</label>
           <input
+            id="address"
             name="address"
             value={location.address ? location.address : ""}
             type="text"
@@ -144,7 +148,8 @@ export const EditLocation = () => {
         <div className="form-group">
           <label htmlFor="latitude">Latitude:</label>
           <input
-            name="imageUrl"
+            id="latitude"
+            name="latitude"
             value={location.latitude ? location.latitude : ""}
             type="text"
             className="form-control"
@@ -161,6 +166,7 @@ export const EditLocation = () => {
         <div className="form-group">
           <label htmlFor="longitude">Longitude:</label>
           <input
+            id="longitude"
             name="longitude"
             value={location.longitude ? location.longitude : ""}
             type="text"
@@ -178,6 +184,7 @@ export const EditLocation = () => {
         <div className="form-group">
           <label htmlFor="bortle">Darkness:</label>
           <input
+            id="bortle"
             name="bortle"
             value={location.bortle ? location.bortle : ""}
             type="text"
@@ -195,6 +202,7 @@ export const EditLocation = () => {
         <div className="form-group">
           <label htmlFor="comments">Comments:</label>
           <input
+            id="comments"
             name="comments"
             value={location.comments ? location.comments : ""}
             type="text"

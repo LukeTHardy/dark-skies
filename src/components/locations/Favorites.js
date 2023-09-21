@@ -31,7 +31,7 @@ export const Favorites = ({ currentUser }) => {
             {favoriteLocations.map((location) => {
               return (
                 <Link to={`/locations/${location.id}`} key={location.id}>
-                  <div className="location-card" key={location.id}>
+                  <div className="locations-card" key={location.id}>
                     <div className="location-card-left">
                       <div className="location-image">
                         <img src={location.imageUrl} alt={location.name} />
