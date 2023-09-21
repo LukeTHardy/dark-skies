@@ -66,29 +66,33 @@ export const LocationDetails = ({ currentUser }) => {
   // JSX for location details
   return (
     <div className="location-card" key={location.id}>
-      <h3 className="location-title">{location.name}</h3>
-      <div className="location-card-left">
-        <div className="location-image">
-          <img src={location.imageUrl} alt={location.name} />
+      <div className="location-card-body">
+        <div className="location-card-left">
+          <div className="location-image">
+            <img src={location.imageUrl} alt={location.name} />
+          </div>
         </div>
-      </div>
-      <div className="location-card-center">
-        <div className="location-name">{location.name}</div>
-        <div>
-          <span className="location-darkness">Light:</span>
-          {location.bortle}
+        <div className="location-card-center">
+          <h3 className="location-name">{location.name}</h3>
+          <div className="location-address">{location.address}</div>
+          <div className="location-city">
+            {location.city}, {location.state?.name}
+          </div>
+          <div>
+            <span className="location-darkness">Light level:</span>
+            {location.bortle}
+          </div>
         </div>
-      </div>
-      <div className="location-card-right">
-        <div className="location-address">{location.address}</div>
-        <div className="location-city">
-          {location.city}, {location.state?.name}
+        <div className="location-card-right">
+          <div className="location-comments">
+            Comments: "{location.comments}"
+          </div>
         </div>
       </div>
 
       {/* conditional button rendering */}
 
-      <div className="btn-container">
+      <div className="location-card-footer">
         {location.favorites?.some(
           (favorite) => favorite.userId === currentUser.id
         ) ? (
@@ -102,14 +106,14 @@ export const LocationDetails = ({ currentUser }) => {
         )}
 
         {location.userId === currentUser.id ? (
-          <div className="user-buttons">
+          <>
             <button className="btn" onClick={handleEditClick}>
               Edit Location
             </button>
             <button className="btn" onClick={handleDeleteClick}>
               Delete Location
             </button>
-          </div>
+          </>
         ) : (
           ""
         )}

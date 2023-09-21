@@ -21,7 +21,7 @@
   margin: 2rem;
 }
 
-.location-card {
+.locations-card {
   width: 58rem;
   border: 2px solid black;
   display: flex;
@@ -36,8 +36,4 @@
   height: 200px;
   overflow: hidden;
   align-self: center;
-}
-
-.location-card-left {
-  /* width: 5rem; */
 }

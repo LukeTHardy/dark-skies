@@ -6,7 +6,7 @@ export const NavBar = () => {
     <div className="navbar">
       <div className="navbar-item">
         <Link to="/" className="link-styling">
-          Dark Skies
+          About Dark Skies
         </Link>
       </div>
       <div className="navbar-item">
