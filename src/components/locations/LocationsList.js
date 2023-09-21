@@ -10,23 +10,24 @@ export const LocationsList = () => {
   const [filteredLocations, setFilteredLocations] = useState([]);
   const navigate = useNavigate();
 
+  // get all the states for the dropdown menu
   useEffect(() => {
     getStates().then((statesArray) => {
       setStates(statesArray);
     });
   }, []);
-
+  // get the locations for the selected state
   useEffect(() => {
     getLocationsByStateId(stateId).then((statesArray) => {
       setFilteredLocations(statesArray);
     });
   }, [stateId]);
-
+  // capture the state Id from the user selection
   const handleInputChange = (e) => {
     const selectedStateId = parseInt(e.target.value);
     setStateId(selectedStateId);
   };
-
+  // display locations after a state has been selected
   if (stateId !== 0) {
     return (
       <div className="locations-page">
@@ -47,7 +48,7 @@ export const LocationsList = () => {
         </div>
 
         <section className="locations-list-container">
-          <h3>{filteredLocations[0]?.state.name}</h3>
+          <h3>{filteredLocations[0]?.state?.name}</h3>
           {filteredLocations.map((location) => {
             return (
               <Link to={`/locations/${location.id}`} key={location.id}>
