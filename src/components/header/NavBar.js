@@ -6,12 +6,12 @@ export const NavBar = () => {
     <div className="navbar">
       <div className="navbar-item">
         <Link to="/" className="link-styling">
-          Why Dark Skies?
+          Dark Skies
         </Link>
       </div>
       <div className="navbar-item">
         <Link to="locations" className="link-styling">
-          Locations
+          Find Dark Skies
         </Link>
       </div>
       <div className="navbar-item">
