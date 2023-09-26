@@ -62,6 +62,7 @@ export const NewLocationForm = ({ currentUser }) => {
         <div className="form-group">
           <label htmlFor="name">Name:</label>
           <input
+            id="name"
             value={newLocation.name}
             name="name"
             type="text"
@@ -75,6 +76,7 @@ export const NewLocationForm = ({ currentUser }) => {
         <div className="form-group">
           <label htmlFor="imageUrl">Image URL:</label>
           <input
+            id="imageUrl"
             value={newLocation.imageUrl}
             name="imageUrl"
             type="text"
@@ -88,6 +90,7 @@ export const NewLocationForm = ({ currentUser }) => {
         <div className="form-group">
           <label htmlFor="city">City:</label>
           <input
+            id="city"
             value={newLocation.city}
             name="city"
             type="text"
@@ -118,6 +121,7 @@ export const NewLocationForm = ({ currentUser }) => {
         <div className="form-group">
           <label htmlFor="address">Street Address:</label>
           <input
+            id="address"
             value={newLocation.address}
             name="address"
             type="text"
@@ -131,6 +135,7 @@ export const NewLocationForm = ({ currentUser }) => {
         <div className="form-group">
           <label htmlFor="latitude">Latitude:</label>
           <input
+            id="latitude"
             value={newLocation.latitude}
             name="latitude"
             type="text"
@@ -144,6 +149,7 @@ export const NewLocationForm = ({ currentUser }) => {
         <div className="form-group">
           <label htmlFor="longitude">Longitude:</label>
           <input
+            id="longitude"
             value={newLocation.longitude}
             name="longitude"
             type="text"
@@ -157,6 +163,7 @@ export const NewLocationForm = ({ currentUser }) => {
         <div className="form-group">
           <label htmlFor="bortle">Darkness rating:</label>
           <input
+            id="bortle"
             value={newLocation.bortle}
             name="bortle"
             type="text"
@@ -170,6 +177,7 @@ export const NewLocationForm = ({ currentUser }) => {
         <div className="form-group">
           <label htmlFor="comments">Comments:</label>
           <input
+            id="comments"
             value={newLocation.comments}
             name="comments"
             type="text"

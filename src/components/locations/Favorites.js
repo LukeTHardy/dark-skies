@@ -33,21 +33,27 @@ export const Favorites = ({ currentUser }) => {
                 <Link to={`/locations/${location.id}`} key={location.id}>
                   <div className="locations-card" key={location.id}>
                     <div className="location-card-left">
-                      <div className="location-image">
-                        <img src={location.imageUrl} alt={location.name} />
+                      <div>
+                        <img
+                          src={location.imageUrl}
+                          alt={location.name}
+                          className="location-image"
+                        />
                       </div>
                     </div>
                     <div className="location-card-center">
                       <div className="location-name">{location.name}</div>
-                      <div>
-                        <span className="location-darkness">Darkness:</span>
-                        {location.bortle}
+                      <div className="location-address address">
+                        {location.address}
+                      </div>
+                      <div className="location-city address">
+                        {location.city}, {favoriteLocations[0].state?.name}
                       </div>
                     </div>
                     <div className="location-card-right">
-                      <div className="location-address">{location.address}</div>
-                      <div className="location-city">
-                        {location.city}, {location.state.name}
+                      <div>
+                        <span className="location-darkness">Darkness:</span>
+                        {location.bortle}
                       </div>
                     </div>
                   </div>

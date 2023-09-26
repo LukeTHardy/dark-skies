@@ -21,9 +21,6 @@ export const Banner = () => {
       ) : (
         ""
       )}
-      {/* <div className="banner-item" id="logout">
-        Logout
-      </div> */}
       <div className="banner-item" id="banner-title">
         Site Name
       </div>

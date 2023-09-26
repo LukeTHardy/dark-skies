@@ -32,8 +32,8 @@ export const LocationsList = () => {
     return (
       <div className="locations-page">
         <div className="locations-header">
-          <h2 className="locations-title">Which State Do You Live In?</h2>
-          <div className="states-dropdown">
+          <h3 className="locations-title">Where Do You Live?</h3>
+          <div className="states-dropdown select">
             <select name="stateId" onChange={handleInputChange} value={stateId}>
               <option value={0}>Select a state</option>
               {states.map((statesObj) => {
@@ -48,27 +48,33 @@ export const LocationsList = () => {
         </div>
 
         <section className="locations-list-container">
-          <h3>{filteredLocations[0]?.state?.name}</h3>
+          <h2>{filteredLocations[0]?.state?.name} Locations:</h2>
           {filteredLocations.map((location) => {
             return (
               <Link to={`/locations/${location.id}`} key={location.id}>
                 <div className="locations-card" key={location.id}>
                   <div className="location-card-left">
-                    <div className="location-image">
-                      <img src={location.imageUrl} alt={location.name} />
+                    <div>
+                      <img
+                        src={location.imageUrl}
+                        alt={location.name}
+                        className="location-image"
+                      />
                     </div>
                   </div>
                   <div className="location-card-center">
                     <div className="location-name">{location.name}</div>
-                    <div>
-                      <span className="location-darkness">Darkness:</span>
-                      {location.bortle}
+                    <div className="location-address address">
+                      {location.address}
+                    </div>
+                    <div className="location-city address">
+                      {location.city}, {filteredLocations[0].state?.name}
                     </div>
                   </div>
                   <div className="location-card-right">
-                    <div className="location-address">{location.address}</div>
-                    <div className="location-city">
-                      {location.city}, {filteredLocations[0].state?.name}
+                    <div>
+                      <span className="location-darkness">Darkness:</span>
+                      {location.bortle}
                     </div>
                   </div>
                 </div>
@@ -90,10 +96,10 @@ export const LocationsList = () => {
     return (
       <div className="locations-page">
         <div className="locations-header">
-          <h2 className="locations-title">Which State Do You Live In?</h2>
-          <div className="states-dropdown">
+          <h3 className="locations-title">Where Do You Live?</h3>
+          <div className="states-dropdown select">
             <select name="stateId" onChange={handleInputChange} value={stateId}>
-              <option value={0}>Please select a state</option>
+              <option value={0}>Select a state</option>
               {states.map((statesObj) => {
                 return (
                   <option key={statesObj.id} value={statesObj.id}>
@@ -104,7 +110,10 @@ export const LocationsList = () => {
             </select>
           </div>
           <section className="locations-list-container">
-            <i>No state selected</i>
+            <br></br>
+            <h3>
+              <i>No state selected</i>
+            </h3>
           </section>
           <button
             className="btn"
