@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-size: cover;
 }
 
 .locations-header {
@@ -11,19 +12,19 @@
 }
 
 .locations-list-container {
-  width: 60rem;
-  border: 2px solid black;
+  width: 50rem;
+  /* border: 2px solid black; */
   border-radius: 1rem;
-  padding: 0rem 2rem 2rem 2rem;
+  padding: 0rem 1.5rem 2rem 1.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 2rem;
+  /* margin: 2rem; */
 }
 
 .locations-card {
-  width: 58rem;
-  border: 2px solid black;
+  width: 49rem;
+  border: 1px solid #faf9f6;
   display: flex;
   justify-content: space-evenly;
   padding: 1rem;
@@ -31,9 +32,41 @@
   border-radius: 1rem;
 }
 
+.location-card-left {
+  flex-basis: 20%;
+  /* width: 14rem; */
+  /* height: auto; */
+  /* object-fit: contain; */
+}
+.location-card-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-basis: 50%;
+  font-size: 1.4rem;
+  text-wrap: wrap;
+}
+.location-card-right {
+  flex-basis: 20%;
+  text-align: center;
+}
+
 .location-image {
-  width: 200px;
-  height: 200px;
+  width: 12rem;
+  height: auto;
+  /* object-fit: contain;
   overflow: hidden;
-  align-self: center;
+  align-self: center; */
+}
+
+.location-details-image {
+  width: 25rem;
+  height: auto;
+  /* object-fit: contain;
+    overflow: hidden;
+    align-self: center; */
+}
+
+.address {
+  font-size: 1rem;
 }

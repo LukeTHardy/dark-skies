@@ -5,9 +5,9 @@ export const Welcome = () => {
     <div className="welcome-container">
       <h1>
         <span>Welcome to</span>
-        <span>[Site Name]</span>
+        <span>[TBD]</span>
       </h1>
-      <div>[insert explanation of Bortle scale]</div>
+      <div>[explanation of Bortle scale/light pollution etc etc etc]</div>
     </div>
   );
 };

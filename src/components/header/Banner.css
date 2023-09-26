@@ -9,8 +9,24 @@
 
 #banner-logout {
   align-self: end;
-  margin-right: 1rem;
+  margin-right: 0.5rem;
   padding-top: 0.5rem;
+  text-shadow: rgb(239, 244, 249) 0 0 5px;
+  text-decoration: none;
+  font-family: "Quicksand", sans-serif;
+  letter-spacing: 2px;
+  color: white;
+}
+
+#banner-logout:hover {
+  transform: scale(1.07);
+  transition: 0.15s ease-in;
+  text-shadow: white 0 0 8px;
+  cursor: pointer;
+}
+
+#banner-logout:not(:hover) {
+  transition: 0.15s ease-out;
 }
 
 #banner-title {
@@ -19,11 +35,4 @@
 
 #banner-logo {
   margin-bottom: 1rem;
-}
-
-.banner-link {
-  text-decoration: none;
-  font-family: "Quicksand", sans-serif;
-  letter-spacing: 1px;
-  color: white;
 }
