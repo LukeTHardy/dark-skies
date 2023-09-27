@@ -1,9 +1,16 @@
 import { Link } from "react-router-dom";
 import "./NavBar.css";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 export const NavBar = () => {
   const navigate = useNavigate();
+  const location = useLocation();
+
+  // Define a function to check if a given route is the current route
+  const isCurrentRoute = (route) => {
+    return location.pathname === route;
+  };
+
   return (
     <div className="navbar">
       <div className="navbar-item">
@@ -11,6 +18,7 @@ export const NavBar = () => {
           onClick={() => {
             navigate("/");
           }}
+          className={isCurrentRoute("/") ? "link-active" : ""}
         >
           <span className="spark-container">
             <span className="spark" />
@@ -24,6 +32,7 @@ export const NavBar = () => {
           onClick={() => {
             navigate("/locations");
           }}
+          className={isCurrentRoute("/locations") ? "link-active" : ""}
         >
           <span className="spark-container">
             <span className="spark" />
@@ -37,6 +46,9 @@ export const NavBar = () => {
           onClick={() => {
             navigate("/locations/favorites");
           }}
+          className={
+            isCurrentRoute("/locations/favorites") ? "link-active" : ""
+          }
         >
           <span className="spark-container">
             <span className="spark" />
@@ -50,6 +62,7 @@ export const NavBar = () => {
           onClick={() => {
             navigate("/add-location");
           }}
+          className={isCurrentRoute("/add-location") ? "link-active" : ""}
         >
           <span className="spark-container">
             <span className="spark" />
