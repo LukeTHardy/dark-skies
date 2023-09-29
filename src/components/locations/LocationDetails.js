@@ -12,7 +12,7 @@ import {
 import { useNavigate, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 
-export const LocationDetails = ({ currentUser }) => {
+export const LocationDetails = ({ currentUser, userLat, userLong }) => {
   const navigate = useNavigate();
   const { locationId } = useParams();
   const [location, setLocation] = useState({});
@@ -111,7 +111,7 @@ export const LocationDetails = ({ currentUser }) => {
                 </button>
                 <button
                   id="delete-btn"
-                  role="button"
+                  // role="button"
                   onClick={handleDeleteClick}
                 >
                   <span class="text">Delete Location</span>

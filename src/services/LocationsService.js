@@ -23,7 +23,9 @@ export const deleteLocation = (locationId) => {
 };
 
 export const getLocations = () => {
-  return fetch(`http://localhost:8088/locations`).then((res) => res.json());
+  return fetch(`http://localhost:8088/locations?_expand=state`).then((res) =>
+    res.json()
+  );
 };
 
 export const getLocationById = (locationId) => {

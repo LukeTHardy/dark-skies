@@ -8,9 +8,31 @@ import { LocationsList } from "../components/locations/LocationsList";
 import { LocationDetails } from "../components/locations/LocationDetails";
 import { Favorites } from "../components/locations/Favorites";
 import { EditLocation } from "../components/forms/EditLocation";
+import { StationTracker } from "../components/extras/StationTracker";
 
 export const ApplicationViews = () => {
   const [currentUser, setCurrentUser] = useState({});
+  const [userLat, setUserLat] = useState("");
+  const [userLong, setUserLong] = useState("");
+
+  useEffect(() => {
+    if ("geolocation" in navigator) {
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          const { latitude, longitude } = position.coords;
+          setUserLat(latitude);
+          setUserLong(longitude);
+          console.log("Latitude: " + latitude);
+          console.log("Longitude: " + longitude);
+        },
+        (error) => {
+          console.error("Error getting location:", error);
+        }
+      );
+    } else {
+      console.log("Geolocation is not available in this browser.");
+    }
+  }, []);
 
   useEffect(() => {
     const localSkiesUser = localStorage.getItem("skies_user");
@@ -36,10 +58,25 @@ export const ApplicationViews = () => {
           element={<NewLocationForm currentUser={currentUser} />}
         />
         <Route path="locations">
-          <Route index element={<LocationsList currentUser={currentUser} />} />
+          <Route
+            index
+            element={
+              <LocationsList
+                currentUser={currentUser}
+                userLat={userLat}
+                userLong={userLong}
+              />
+            }
+          />
           <Route
             path=":locationId"
-            element={<LocationDetails currentUser={currentUser} />}
+            element={
+              <LocationDetails
+                currentUser={currentUser}
+                userLat={userLat}
+                userLong={userLong}
+              />
+            }
           />
           <Route
             path=":locationId/edit"
@@ -50,6 +87,10 @@ export const ApplicationViews = () => {
             element={<Favorites currentUser={currentUser} />}
           />
         </Route>
+        <Route
+          path="station"
+          element={<StationTracker currentUser={currentUser} />}
+        />
         {/* <Route path="employees">
           <Route index element={<EmployeeList />} />
           <Route path=":employeeId" element={<EmployeeDetails />} />

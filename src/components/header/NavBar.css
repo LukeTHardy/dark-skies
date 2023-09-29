@@ -3,6 +3,8 @@
   flex-direction: nowrap;
   justify-content: space-around;
   background-color: #0e1322;
+  box-shadow: #faf9f6 0 0 6px;
+  height: 3.5rem;
   /* filter: blur(5px); */
   /* padding-top: 0.5rem;
   padding-bottom: 0.5rem; */
@@ -37,7 +39,7 @@ button {
   font-family: "Space Mono";
   font-weight: bold;
   font-size: 1.5rem;
-  text-shadow: rgb(239, 244, 249) 0 0 5px;
+  /* text-shadow: rgb(239, 244, 249) 0 0 5px; */
 }
 
 button:hover .backdrop {

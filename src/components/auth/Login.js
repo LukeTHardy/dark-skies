@@ -1,12 +1,22 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import "./Login.css";
 import { getUserByEmail } from "../../services/userService";
+import { apodFetch } from "../../services/APODService";
+import nebulaPic from "../../assets/carina-nebula-jets.png";
 
 export const Login = () => {
   const [email, set] = useState("me@me.com");
+  const [apodURL, setApodUrl] = useState("");
   const navigate = useNavigate();
+
+  useEffect(() => {
+    apodFetch().then((apodObj) => {
+      const APOD = apodObj.hdurl;
+      setApodUrl(APOD);
+    });
+  }, []);
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -30,7 +40,7 @@ export const Login = () => {
 
   return (
     <main className="container-login">
-      <section>
+      <section className="login-comp">
         <form className="form-login" onSubmit={handleLogin}>
           <h3>Welcome to</h3>
           <h1>[Site Name]</h1>
@@ -56,10 +66,15 @@ export const Login = () => {
             </div>
           </fieldset>
         </form>
+        <div>
+          <Link to="/register">Not a member yet?</Link>
+        </div>
       </section>
-      <section>
-        <Link to="/register">Not a member yet?</Link>
-      </section>
+      <img
+        src={nebulaPic}
+        alt="NASA Astronomy Pic of the Day"
+        className="background-img"
+      />
     </main>
   );
 };

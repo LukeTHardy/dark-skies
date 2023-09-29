@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import "./NavBar.css";
 import { useNavigate, useLocation } from "react-router-dom";
 
@@ -69,6 +69,20 @@ export const NavBar = () => {
           </span>
           <span className="backdrop" />
           <span className="text navbar-item">Add New Location</span>
+        </button>
+      </div>
+      <div className="navbar-item">
+        <button
+          onClick={() => {
+            navigate("/station");
+          }}
+          className={isCurrentRoute("/station") ? "link-active" : ""}
+        >
+          <span className="spark-container">
+            <span className="spark" />
+          </span>
+          <span className="backdrop" />
+          <span className="text navbar-item">Spot The Station</span>
         </button>
       </div>
     </div>
