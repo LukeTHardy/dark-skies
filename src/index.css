@@ -3,7 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Happy+Monkey&family=Orbitron:wght@400;800&family=Space+Grotesk&family=Space+Mono&family=Titillium+Web&display=swap");
 
 :root {
-  --background-gradient: linear-gradient(180deg, #090d16 20%, #23386b);
+  --background-gradient: linear-gradient(180deg, black 40%, #101931);
   --gray: #34495e;
   --darkgray: #2c3e50;
   font-family: "Space-Mono";

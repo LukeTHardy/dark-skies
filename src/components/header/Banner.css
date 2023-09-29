@@ -90,7 +90,7 @@
   left: 0;
   bottom: 0;
   right: 0;
-  height: 11.75rem;
+  height: 12rem;
   width: 100%;
 }
 
@@ -104,12 +104,12 @@
   right: 0;
   display: block;
   z-index: 0;
-  height: 11.75rem;
+  height: 12rem;
 }
 
 .twinkling {
   width: 10000px;
-  height: 11.75rem;
+  height: 12rem;
   background: transparent
     url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/twinkling.png")
     repeat;
@@ -129,7 +129,7 @@
 
 .clouds {
   width: 10000px;
-  height: 11.75rem;
+  height: 12rem;
   background: transparent
     url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/clouds_repeat.png")
     repeat;
@@ -138,7 +138,7 @@
   right: 0;
   top: 0;
   bottom: 0;
-  z-index: 2;
+  z-index: 3;
 
   -moz-animation: move-background 150s linear infinite;
   -ms-animation: move-background 150s linear infinite;
