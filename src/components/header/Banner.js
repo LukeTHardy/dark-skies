@@ -21,12 +21,11 @@ export const Banner = () => {
       ) : (
         ""
       )}
-
       <div className="banner-item" id="banner-title">
-        Site Name
+        Dark Skies
       </div>
       <div className="banner-item" id="banner-logo">
-        *img*
+        <i></i>
       </div>
       <div className="background-container">
         <img
