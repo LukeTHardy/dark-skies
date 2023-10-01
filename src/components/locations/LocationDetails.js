@@ -65,57 +65,57 @@ export const LocationDetails = ({ currentUser, userLat, userLong }) => {
 
   // JSX for location details
   return (
-    <div className="details-page">
-      <div className="location-card" key={location.id}>
-        <div className="location-card-left">
-          <div>
-            <img
-              src={location.imageUrl}
-              alt={location.name}
-              className="location-details-image"
-            />
-          </div>
-        </div>
-        <div className="location-card-right">
-          <h3 className="location-name">{location.name}</h3>
-          <div className="location-address">{location.address}</div>
-          <div className="location-city">
-            {location.city}, {location.state?.name}
-          </div>
-          <div>
-            <span className="location-darkness">Light level:</span>
-            {location.bortle}
-          </div>
-          <div className="location-comments">
-            Comments: "{location.comments}"
+    <div className="details-comp">
+      <div className="loc-details-card" key={location.id}>
+        <h2 className="loc-name">{location.name}</h2>
+        <img
+          src={location.imageUrl}
+          alt={location.name}
+          className="loc-details-image"
+        />
+        <div className="loc-footer">
+          <div className="loc-deets">
+            <div className="loc-address">{location.address}</div>
+            <div className="loc-city-state">
+              {location.city}, {location.state?.name}
+            </div>
+            <br></br>
+            <div>
+              <span className="loc-darkness">Light level: </span>
+              {location.bortle}
+            </div>
+            <div className="loc-comments">Comments: "{location.comments}"</div>
           </div>
           {/* conditional button rendering */}
 
-          <div className="location-card-footer">
+          <div className="btn-container">
             {location.favorites?.some(
               (favorite) => favorite.userId === currentUser.id
             ) ? (
-              <button className="btn" onClick={handleRemoveFavoriteClick}>
+              <button
+                className="details-btn"
+                onClick={handleRemoveFavoriteClick}
+              >
                 Remove from Favorites
               </button>
             ) : (
-              <button className="btn" onClick={handleFavoriteClick}>
+              <button className="details-btn" onClick={handleFavoriteClick}>
                 Add To Favorites
               </button>
             )}
 
             {location.userId === currentUser.id ? (
               <>
-                <button className="btn" onClick={handleEditClick}>
-                  Edit Location
+                <button className="details-btn" onClick={handleEditClick}>
+                  Edit
                 </button>
                 <button
                   id="delete-btn"
                   // role="button"
                   onClick={handleDeleteClick}
                 >
-                  <span class="text">Delete Location</span>
-                  <span>(are you sure?)</span>
+                  <span className="text">Delete Location</span>
+                  <span>Are you sure?</span>
                 </button>
               </>
             ) : (

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Login.css";
 import { createUser, getUserByEmail } from "../../services/userService";
+import saturn4 from "../../assets/saturn4.jpg";
 
 export const Register = (props) => {
   const [user, setUser] = useState({
@@ -48,43 +49,51 @@ export const Register = (props) => {
   };
 
   return (
-    <main style={{ textAlign: "center" }}>
-      <form className="form-login" onSubmit={handleRegister}>
-        <h1>[Site Name]</h1>
-        <h2>Please Register</h2>
-        <fieldset>
-          <div className="form-group">
-            <input
-              onChange={updateUser}
-              type="text"
-              id="name"
-              className="form-control"
-              placeholder="Enter your name"
-              required
-              autoFocus
-            />
-          </div>
-        </fieldset>
-        <fieldset>
-          <div className="form-group">
-            <input
-              onChange={updateUser}
-              type="email"
-              id="email"
-              className="form-control"
-              placeholder="Email address"
-              required
-            />
-          </div>
-        </fieldset>
-        <fieldset>
-          <div className="form-group">
-            <button className="login-btn btn-info" type="submit">
-              Register
-            </button>
-          </div>
-        </fieldset>
-      </form>
+    <main className="container-login" style={{ textAlign: "center" }}>
+      <section className="register-container">
+        <form className="form-register" onSubmit={handleRegister}>
+          {/* <h1>Dark Skies</h1> */}
+          <h2>Sign up:</h2>
+          <fieldset>
+            <div className="form-group">
+              <input
+                onChange={updateUser}
+                type="text"
+                id="name"
+                className="form-control"
+                placeholder="Enter your name"
+                required
+                autoFocus
+              />
+            </div>
+          </fieldset>
+          <fieldset>
+            <div className="form-group">
+              <input
+                onChange={updateUser}
+                type="email"
+                id="email"
+                className="form-control"
+                placeholder="Email address"
+                required
+              />
+            </div>
+          </fieldset>
+          <br></br>
+          <fieldset>
+            <div className="form-group">
+              <button className="login-btn btn-info" type="submit">
+                Register
+              </button>
+            </div>
+          </fieldset>
+        </form>
+        <img
+          src={saturn4}
+          alt="NASA Astronomy Pic of the Day"
+          className="background-img"
+        />
+      </section>
     </main>
   );
 };

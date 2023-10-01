@@ -6,7 +6,7 @@
   --background-gradient: linear-gradient(180deg, black 40%, #101931);
   --gray: #34495e;
   --darkgray: #2c3e50;
-  font-family: "Space-Mono";
+  font-family: "Space Mono";
 }
 select {
   /* Reset Select */
@@ -24,6 +24,7 @@ select {
   cursor: pointer;
   height: 3rem;
   font-size: 1rem;
+  font-family: "Space Mono";
 }
 /* Remove IE arrow */
 select::-ms-expand {
@@ -33,7 +34,7 @@ select::-ms-expand {
 .select {
   position: relative;
   display: flex;
-  width: 12em;
+  width: 14em;
   height: 3em;
   border-radius: 0.25em;
   overflow: hidden;
@@ -84,8 +85,4 @@ a {
   display: flex;
   justify-content: center;
   align-items: absolute;
-}
-
-button {
-  color: #faf9f6;
 }

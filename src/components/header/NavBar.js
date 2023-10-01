@@ -18,13 +18,13 @@ export const NavBar = () => {
           onClick={() => {
             navigate("/");
           }}
-          className={isCurrentRoute("/") ? "link-active" : ""}
+          className={`navbar-btn ${isCurrentRoute("/") ? "link-active" : ""}`}
         >
           <span className="spark-container">
             <span className="spark" />
           </span>
           <span className="backdrop" />
-          <span className="text navbar-item">About Dark Skies</span>
+          <span className="text navbar-item">About</span>
         </button>
       </div>
       <div className="navbar-item">
@@ -32,7 +32,9 @@ export const NavBar = () => {
           onClick={() => {
             navigate("/locations");
           }}
-          className={isCurrentRoute("/locations") ? "link-active" : ""}
+          className={`navbar-btn ${
+            isCurrentRoute("/locations") ? "link-active" : ""
+          }`}
         >
           <span className="spark-container">
             <span className="spark" />
@@ -46,9 +48,9 @@ export const NavBar = () => {
           onClick={() => {
             navigate("/locations/favorites");
           }}
-          className={
+          className={`navbar-btn ${
             isCurrentRoute("/locations/favorites") ? "link-active" : ""
-          }
+          }`}
         >
           <span className="spark-container">
             <span className="spark" />
@@ -62,7 +64,9 @@ export const NavBar = () => {
           onClick={() => {
             navigate("/add-location");
           }}
-          className={isCurrentRoute("/add-location") ? "link-active" : ""}
+          className={`navbar-btn ${
+            isCurrentRoute("/add-location") ? "link-active" : ""
+          }`}
         >
           <span className="spark-container">
             <span className="spark" />
@@ -76,7 +80,9 @@ export const NavBar = () => {
           onClick={() => {
             navigate("/station");
           }}
-          className={isCurrentRoute("/station") ? "link-active" : ""}
+          className={`navbar-btn ${
+            isCurrentRoute("/station") ? "link-active" : ""
+          }`}
         >
           <span className="spark-container">
             <span className="spark" />

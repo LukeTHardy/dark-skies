@@ -24,9 +24,9 @@
   transform: scale(1.08);
 }
 
-button {
+.navbar-btn {
   --transition: 0.25s;
-  --spark: 0.3s;
+  --spark: 0.35s;
   --bg: black;
   background: var(--bg);
   padding: 6px 18px;
@@ -37,33 +37,33 @@ button {
   overflow: hidden;
   /* box-shadow: 0 1000px 0 0 #0e1322 inset; */
   transition: box-shadow var(--transition), background var(--transition);
-  transform: var(--transition);
+  /* transform: var(--transition); */
   font-family: "Space Mono";
   font-weight: bold;
   font-size: 1.5rem;
   /* text-shadow: rgb(239, 244, 249) 0 0 5px; */
 }
 
-button:hover .backdrop {
+.navbar-btn:hover .backdrop {
   background: black;
 }
 
-button:hover {
+.navbar-btn:hover {
   transform: scale(1.08);
   transition: 0.15s ease-in;
   text-shadow: white 0 0 15px;
   cursor: pointer;
 }
-button:not(:hover) {
+.navbar-btn:not(:hover) {
   transition: 0.15s ease-out;
 }
 
-button:hover .spark {
+.navbar-btn:hover .spark {
   animation: flip calc(var(--spark) * 2) 1 steps(2, end);
   /* animation-delay: 0.1s; */
 }
 
-button:hover .spark:before {
+.navbar-btn:hover .spark:before {
   animation: rotate var(--spark) linear 2 both;
 }
 

@@ -132,7 +132,7 @@ export const LocationsList = ({ userLat, userLong }) => {
 
           {!locationsFilteredByState.length ? (
             <h4>
-              <i>No results...yet</i>
+              <i>No results...yet.</i>
             </h4>
           ) : (
             <h2>{locationsFilteredByState[0]?.state?.name} Locations:</h2>
@@ -162,7 +162,7 @@ export const LocationsList = ({ userLat, userLong }) => {
                   </div>
                   <div className="location-card-right">
                     <div>
-                      <span className="location-darkness">Darkness:</span>
+                      <span className="location-darkness">Light Level: </span>
                       {location.bortle}
                     </div>
                   </div>
@@ -171,14 +171,16 @@ export const LocationsList = ({ userLat, userLong }) => {
             );
           })}
         </section>
-        <button
-          className="btn"
-          onClick={() => {
-            navigate("/add-location");
-          }}
-        >
-          Add A Location
-        </button>
+        <div className="btn-container">
+          <button
+            className="add-loc-btn"
+            onClick={() => {
+              navigate("/add-location");
+            }}
+          >
+            Add A Location
+          </button>
+        </div>
       </div>
     );
   } else if (radiusId !== 0) {
@@ -230,10 +232,10 @@ export const LocationsList = ({ userLat, userLong }) => {
 
           {!locationsFilteredByRadius.length ? (
             <h4>
-              <i>No results...yet</i>
+              <i>No results...yet.</i>
             </h4>
           ) : (
-            <h2>Locations Within {radiusId} miles:</h2>
+            <h2>Locations within {radiusId} miles:</h2>
           )}
 
           {locationsFilteredByRadius.map((location) => {
@@ -261,7 +263,7 @@ export const LocationsList = ({ userLat, userLong }) => {
                   </div>
                   <div className="location-card-right">
                     <div>
-                      <span className="location-darkness">Darkness:</span>
+                      <span className="location-darkness">Light Level: </span>
                       {location.bortle}
                     </div>
                   </div>
@@ -270,14 +272,16 @@ export const LocationsList = ({ userLat, userLong }) => {
             );
           })}
         </section>
-        <button
-          className="btn"
-          onClick={() => {
-            navigate("/add-location");
-          }}
-        >
-          Add A Location
-        </button>
+        <div className="btn-container">
+          <button
+            className="add-loc-btn"
+            onClick={() => {
+              navigate("/add-location");
+            }}
+          >
+            Add A Location
+          </button>
+        </div>
       </div>
     );
   } else {
@@ -326,17 +330,19 @@ export const LocationsList = ({ userLat, userLong }) => {
         <section className="locations-list-container">
           <br></br>
           <h4>
-            <i>No results...yet</i>
+            <i>No results...yet.</i>
           </h4>
         </section>
-        <button
-          className="btn"
-          onClick={() => {
-            navigate("/add-location");
-          }}
-        >
-          Add A Location
-        </button>
+        <div className="btn-container">
+          <button
+            className="add-loc-btn"
+            onClick={() => {
+              navigate("/add-location");
+            }}
+          >
+            Add A Location
+          </button>
+        </div>
       </div>
     );
   }
