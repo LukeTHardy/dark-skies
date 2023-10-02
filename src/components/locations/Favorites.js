@@ -67,7 +67,7 @@ export const Favorites = ({ currentUser }) => {
                 navigate("/add-location");
               }}
             >
-              Add A Location
+              Add New Location
             </button>
           </section>
         </div>

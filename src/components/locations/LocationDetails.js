@@ -12,12 +12,33 @@ import {
 import { useNavigate, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 
-export const LocationDetails = ({ currentUser, userLat, userLong }) => {
+export const LocationDetails = ({ currentUser }) => {
   const navigate = useNavigate();
   const { locationId } = useParams();
   const [location, setLocation] = useState({});
   const [favorites, setFavorites] = useState([]);
   const [foundFavorite, setFoundFavorite] = useState({});
+  const [userLat, setUserLat] = useState("");
+  const [userLong, setUserLong] = useState("");
+
+  useEffect(() => {
+    if ("geolocation" in navigator) {
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          const { latitude, longitude } = position.coords;
+          setUserLat(latitude);
+          setUserLong(longitude);
+          console.log("Latitude: " + latitude);
+          console.log("Longitude: " + longitude);
+        },
+        (error) => {
+          console.error("Error getting location:", error);
+        }
+      );
+    } else {
+      console.log("Geolocation is not available in this browser.");
+    }
+  }, []);
 
   // get the list of all favorites
   useEffect(() => {
@@ -66,14 +87,14 @@ export const LocationDetails = ({ currentUser, userLat, userLong }) => {
   // JSX for location details
   return (
     <div className="details-comp">
-      <div className="loc-details-card" key={location.id}>
-        <h2 className="loc-name">{location.name}</h2>
-        <img
-          src={location.imageUrl}
-          alt={location.name}
-          className="loc-details-image"
-        />
-        <div className="loc-footer">
+      <h2 className="loc-name">{location.name}</h2>
+      <div className="details-card-container">
+        <div className="loc-details-card" key={location.id}>
+          <img
+            src={location.imageUrl}
+            alt={location.name}
+            className="loc-details-image"
+          />
           <div className="loc-deets">
             <div className="loc-address">{location.address}</div>
             <div className="loc-city-state">
@@ -86,42 +107,45 @@ export const LocationDetails = ({ currentUser, userLat, userLong }) => {
             </div>
             <div className="loc-comments">Comments: "{location.comments}"</div>
           </div>
-          {/* conditional button rendering */}
-
-          <div className="btn-container">
-            {location.favorites?.some(
-              (favorite) => favorite.userId === currentUser.id
-            ) ? (
-              <button
-                className="details-btn"
-                onClick={handleRemoveFavoriteClick}
-              >
-                Remove from Favorites
-              </button>
-            ) : (
-              <button className="details-btn" onClick={handleFavoriteClick}>
-                Add To Favorites
-              </button>
-            )}
-
-            {location.userId === currentUser.id ? (
-              <>
-                <button className="details-btn" onClick={handleEditClick}>
-                  Edit
-                </button>
-                <button
-                  id="delete-btn"
-                  // role="button"
-                  onClick={handleDeleteClick}
-                >
-                  <span className="text">Delete Location</span>
-                  <span>Are you sure?</span>
-                </button>
-              </>
-            ) : (
-              ""
-            )}
+          <br></br>
+          <div className="extra-btns">
+            <button className="details-btn">Get Directions</button>
+            <button className="details-btn">Get Forecast</button>
           </div>
+        </div>
+        <div className="btn-container">
+          {location.favorites?.some(
+            (favorite) => favorite.userId === currentUser.id
+          ) ? (
+            <button className="details-btn" onClick={handleRemoveFavoriteClick}>
+              Remove from Favorites
+            </button>
+          ) : (
+            <button className="details-btn" onClick={handleFavoriteClick}>
+              Add To Favorites
+            </button>
+          )}
+
+          {location.userId === currentUser.id ? (
+            <>
+              <button className="details-btn" onClick={handleEditClick}>
+                Edit
+              </button>
+              <button
+                id="delete-btn"
+                // role="button"
+                onClick={handleDeleteClick}
+              >
+                <span className="text">Delete</span>
+                <span>Are you sure?</span>
+              </button>
+            </>
+          ) : (
+            <>
+              <button className="details-btn-inactive">Edit</button>
+              <button className="details-btn-inactive">Delete</button>
+            </>
+          )}
         </div>
       </div>
     </div>

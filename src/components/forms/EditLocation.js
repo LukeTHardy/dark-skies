@@ -52,7 +52,7 @@ export const EditLocation = () => {
         <h2 className="form-title">Edit Location</h2>
         <fieldset>
           <div className="loc-form-group">
-            <label htmlFor="name">Name:</label>
+            <label htmlFor="name">Name: </label>
             <input
               id="name"
               name="name"
@@ -70,7 +70,7 @@ export const EditLocation = () => {
         </fieldset>
         <fieldset>
           <div className="loc-form-group">
-            <label htmlFor="imageUrl">Image URL:</label>
+            <label htmlFor="imageUrl">Image URL: </label>
             <input
               id="imageUrl"
               name="imageUrl"
@@ -88,7 +88,7 @@ export const EditLocation = () => {
         </fieldset>
         <fieldset>
           <div className="loc-form-group">
-            <label htmlFor="city">City:</label>
+            <label htmlFor="city">City: </label>
             <input
               id="city"
               name="city"
@@ -105,7 +105,7 @@ export const EditLocation = () => {
           </div>
         </fieldset>
         <div className="state-container">
-          <div className="state-title">State:</div>
+          <div className="state-title">State: </div>
           <div className="select flex">
             <select
               name="stateId"
@@ -129,7 +129,7 @@ export const EditLocation = () => {
         </div>
         <fieldset>
           <div className="loc-form-group">
-            <label htmlFor="address">Address:</label>
+            <label htmlFor="address">Address: </label>
             <input
               id="address"
               name="address"
@@ -147,7 +147,7 @@ export const EditLocation = () => {
         </fieldset>
         <fieldset>
           <div className="loc-form-group">
-            <label htmlFor="latitude">Latitude:</label>
+            <label htmlFor="latitude">Latitude: </label>
             <input
               id="latitude"
               name="latitude"
@@ -165,7 +165,7 @@ export const EditLocation = () => {
         </fieldset>
         <fieldset>
           <div className="loc-form-group">
-            <label htmlFor="longitude">Longitude:</label>
+            <label htmlFor="longitude">Longitude: </label>
             <input
               id="longitude"
               name="longitude"
@@ -183,7 +183,7 @@ export const EditLocation = () => {
         </fieldset>
         <fieldset>
           <div className="loc-form-group">
-            <label htmlFor="bortle">Darkness:</label>
+            <label htmlFor="bortle">Darkness: </label>
             <input
               id="bortle"
               name="bortle"
@@ -201,7 +201,7 @@ export const EditLocation = () => {
         </fieldset>
         <fieldset>
           <div className="loc-form-group">
-            <label htmlFor="comments">Comments:</label>
+            <label htmlFor="comments">Comments: </label>
             <input
               id="comments"
               name="comments"

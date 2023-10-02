@@ -16,10 +16,12 @@
 
 .form-title {
   text-align: center;
+  text-shadow: rgb(170, 213, 246) 0 0 15px;
 }
 
 .state-title {
   font-size: 1.3rem;
+  margin-right: 0.6rem;
 }
 
 .state-container {
@@ -52,6 +54,7 @@ input {
   font-size: 1rem;
   overflow-x: hidden;
   flex: 1;
+  margin-left: 0.6rem;
 }
 
 .save-btn {
