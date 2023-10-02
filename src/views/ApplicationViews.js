@@ -12,27 +12,27 @@ import { StationTracker } from "../components/extras/StationTracker";
 
 export const ApplicationViews = () => {
   const [currentUser, setCurrentUser] = useState({});
-  const [userLat, setUserLat] = useState("");
-  const [userLong, setUserLong] = useState("");
+  // const [userLat, setUserLat] = useState("");
+  // const [userLong, setUserLong] = useState("");
 
-  useEffect(() => {
-    if ("geolocation" in navigator) {
-      navigator.geolocation.getCurrentPosition(
-        (position) => {
-          const { latitude, longitude } = position.coords;
-          setUserLat(latitude);
-          setUserLong(longitude);
-          console.log("Latitude: " + latitude);
-          console.log("Longitude: " + longitude);
-        },
-        (error) => {
-          console.error("Error getting location:", error);
-        }
-      );
-    } else {
-      console.log("Geolocation is not available in this browser.");
-    }
-  }, []);
+  // useEffect(() => {
+  //   if ("geolocation" in navigator) {
+  //     navigator.geolocation.getCurrentPosition(
+  //       (position) => {
+  //         const { latitude, longitude } = position.coords;
+  //         setUserLat(latitude);
+  //         setUserLong(longitude);
+  //         console.log("Latitude: " + latitude);
+  //         console.log("Longitude: " + longitude);
+  //       },
+  //       (error) => {
+  //         console.error("Error getting location:", error);
+  //       }
+  //     );
+  //   } else {
+  //     console.log("Geolocation is not available in this browser.");
+  //   }
+  // }, []);
 
   useEffect(() => {
     const localSkiesUser = localStorage.getItem("skies_user");
@@ -63,8 +63,8 @@ export const ApplicationViews = () => {
             element={
               <LocationsList
                 currentUser={currentUser}
-                userLat={userLat}
-                userLong={userLong}
+                // userLat={userLat}
+                // userLong={userLong}
               />
             }
           />
@@ -73,8 +73,8 @@ export const ApplicationViews = () => {
             element={
               <LocationDetails
                 currentUser={currentUser}
-                userLat={userLat}
-                userLong={userLong}
+                // userLat={userLat}
+                // userLong={userLong}
               />
             }
           />

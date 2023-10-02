@@ -87,7 +87,7 @@
   font-size: 1rem;
 }
 
-.btn-container {
+.add-btn-container {
   margin-bottom: 2rem;
 }
 
@@ -102,7 +102,9 @@
   border-radius: 1rem;
   box-shadow: rgb(170, 213, 246) 0 0 10px;
   font-size: 1.4rem;
-  padding: 10px 15px;
+  padding: 5px 0px;
+  width: 17rem;
+  align-self: center;
 }
 
 .add-loc-btn:hover {

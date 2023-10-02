@@ -45,7 +45,7 @@ export const Login = () => {
     <main className="login-container">
       <section className="login-comp">
         <form onSubmit={handleLogin}>
-          <h3>Welcome to</h3>
+          <h3>Welcome to:</h3>
           <div className="site-title">Dark Skies</div>
           <br></br>
           {/* <h2 className="sign-in-text">Sign in:</h2> */}

@@ -7,7 +7,7 @@ import "./LocationsList.css";
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
-export const LocationsList = ({ userLat, userLong }) => {
+export const LocationsList = () => {
   const [states, setStates] = useState([]);
   const [stateId, setStateId] = useState(0);
   const [radiusId, setRadiusId] = useState(0);
@@ -15,6 +15,27 @@ export const LocationsList = ({ userLat, userLong }) => {
   const [locationsFilteredByRadius, setLocationsFilteredByRadius] = useState(
     []
   );
+  const [userLat, setUserLat] = useState("");
+  const [userLong, setUserLong] = useState("");
+
+  useEffect(() => {
+    if ("geolocation" in navigator) {
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          const { latitude, longitude } = position.coords;
+          setUserLat(latitude);
+          setUserLong(longitude);
+          console.log("Latitude: " + latitude);
+          console.log("Longitude: " + longitude);
+        },
+        (error) => {
+          console.error("Error getting location:", error);
+        }
+      );
+    } else {
+      console.log("Geolocation is not available in this browser.");
+    }
+  }, []);
   const navigate = useNavigate();
 
   // capture the state Id from user selection
@@ -171,14 +192,14 @@ export const LocationsList = ({ userLat, userLong }) => {
             );
           })}
         </section>
-        <div className="btn-container">
+        <div className="add-btn-container">
           <button
             className="add-loc-btn"
             onClick={() => {
               navigate("/add-location");
             }}
           >
-            Add A Location
+            Add New Location
           </button>
         </div>
       </div>
@@ -272,14 +293,14 @@ export const LocationsList = ({ userLat, userLong }) => {
             );
           })}
         </section>
-        <div className="btn-container">
+        <div className="add-btn-container">
           <button
             className="add-loc-btn"
             onClick={() => {
               navigate("/add-location");
             }}
           >
-            Add A Location
+            Add New Location
           </button>
         </div>
       </div>
@@ -333,14 +354,14 @@ export const LocationsList = ({ userLat, userLong }) => {
             <i>No results...yet.</i>
           </h4>
         </section>
-        <div className="btn-container">
+        <div className="add-btn-container">
           <button
             className="add-loc-btn"
             onClick={() => {
               navigate("/add-location");
             }}
           >
-            Add A Location
+            Add New Location
           </button>
         </div>
       </div>
