@@ -183,7 +183,7 @@ export const EditLocation = () => {
         </fieldset>
         <fieldset>
           <div className="loc-form-group">
-            <label htmlFor="bortle">Darkness: </label>
+            <label htmlFor="bortle">Light Level: </label>
             <input
               id="bortle"
               name="bortle"

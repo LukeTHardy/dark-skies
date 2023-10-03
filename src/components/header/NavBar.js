@@ -24,7 +24,9 @@ export const NavBar = () => {
             <span className="spark" />
           </span>
           <span className="backdrop" />
-          <span className="text navbar-item">About</span>
+          <span className="text navbar-item">
+            About <i className="fa-solid fa-house"></i>
+          </span>
         </button>
       </div>
       <div className="navbar-item">
@@ -40,7 +42,9 @@ export const NavBar = () => {
             <span className="spark" />
           </span>
           <span className="backdrop" />
-          <span className="text navbar-item">Find Locations</span>
+          <span className="text navbar-item">
+            Find Locations <i className="fa-solid fa-binoculars"></i>
+          </span>
         </button>
       </div>
       <div className="navbar-item">
@@ -56,7 +60,9 @@ export const NavBar = () => {
             <span className="spark" />
           </span>
           <span className="backdrop" />
-          <span className="text navbar-item">Favorites</span>
+          <span className="text navbar-item">
+            Favorites <i className="fa-solid fa-moon"></i>
+          </span>
         </button>
       </div>
       <div className="navbar-item">
@@ -72,7 +78,9 @@ export const NavBar = () => {
             <span className="spark" />
           </span>
           <span className="backdrop" />
-          <span className="text navbar-item">Add New Location</span>
+          <span className="text navbar-item">
+            New Location <i className="fa-solid fa-thumbtack"></i>
+          </span>
         </button>
       </div>
       <div className="navbar-item">
@@ -88,7 +96,9 @@ export const NavBar = () => {
             <span className="spark" />
           </span>
           <span className="backdrop" />
-          <span className="text navbar-item">Spot The Station</span>
+          <span className="text navbar-item">
+            Spot The Station <i className="fa-solid fa-rocket"></i>
+          </span>
         </button>
       </div>
     </div>

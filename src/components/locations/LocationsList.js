@@ -164,13 +164,11 @@ export const LocationsList = () => {
               <Link to={`/locations/${location.id}`} key={location.id}>
                 <div className="locations-card" key={location.id}>
                   <div className="location-card-left">
-                    <div>
-                      <img
-                        src={location.imageUrl}
-                        alt={location.name}
-                        className="location-image"
-                      />
-                    </div>
+                    <img
+                      src={location.imageUrl}
+                      alt={location.name}
+                      className="location-image"
+                    />
                   </div>
                   <div className="location-card-center">
                     <div className="location-name">{location.name}</div>
@@ -264,13 +262,11 @@ export const LocationsList = () => {
               <Link to={`/locations/${location.id}`} key={location.id}>
                 <div className="locations-card" key={location.id}>
                   <div className="location-card-left">
-                    <div>
-                      <img
-                        src={location.imageUrl}
-                        alt={location.name}
-                        className="location-image"
-                      />
-                    </div>
+                    <img
+                      src={location.imageUrl}
+                      alt={location.name}
+                      className="location-image"
+                    />
                   </div>
                   <div className="location-card-center">
                     <div className="location-name">{location.name}</div>
