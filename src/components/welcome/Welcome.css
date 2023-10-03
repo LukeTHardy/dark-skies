@@ -1,11 +1,31 @@
 .welcome-container {
+  position: relative;
+  top: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   margin: 2rem auto;
-  width: 40%;
+  width: 48rem;
+  height: 12rem;
   text-align: center;
-  padding: 5rem 3rem;
+  padding: 2rem 2rem;
   border: 1px solid var(--outline);
-  background-color: var(--darkgray);
   border-radius: 1rem;
+  background: transparent;
+  /* background: -moz-linear-gradient(
+    45deg,
+    #1c6ea4 0%,
+    #144e75 50%,
+    #081e2d 100%
+  );
+  background: -webkit-linear-gradient(
+    45deg,
+    #1c6ea4 0%,
+    #144e75 50%,
+    #081e2d 100%
+  );
+  background: linear-gradient(45deg, #1c6ea4 0%, #144e75 50%, #081e2d 100%); */
+  box-shadow: rgb(170, 213, 246) 0 0 13px;
 }
 
 /* This targets any h1 that is a child of an element with the .welcome-container class */
@@ -18,4 +38,9 @@
 /* This targets any div that is a child of an element with the .welcome-container class */
 .welcome-container > div {
   font-style: italic;
+}
+
+.welcome-underline {
+  text-decoration: underline;
+  text-underline-offset: 5px;
 }

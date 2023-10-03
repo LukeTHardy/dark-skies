@@ -91,49 +91,7 @@ export const ApplicationViews = () => {
           path="station"
           element={<StationTracker currentUser={currentUser} />}
         />
-        {/* <Route path="employees">
-          <Route index element={<EmployeeList />} />
-          <Route path=":employeeId" element={<EmployeeDetails />} />
-        </Route> */}
-        {/* <Route path="customers">
-          <Route index element={<CustomersList />} />
-          <Route path=":customerId" element={<CustomerDetails />} />
-        </Route> */}
       </Route>
     </Routes>
   );
 };
-
-// useEffect(() => {
-//     const localHoneyUser = localStorage.getItem("honey_user");
-//     const honeyUserObject = JSON.parse(localHoneyUser);
-//     setCurrentUser(honeyUserObject);
-//   }, []);
-
-//   return (
-//     <Routes>
-//       <Route
-//         path="/"
-//         element={
-//           <>
-//             <NavBar />
-//             <Outlet />
-//           </>
-//         }
-//       >
-//         <Route index element={<Welcome />} />
-//         <Route
-//           path="tickets"
-//           element={<TicketList currentUser={currentUser} />}
-//         />
-//         <Route path="employees">
-//           <Route index element={<EmployeeList />} />
-//           <Route path=":employeeId" element={<EmployeeDetails />} />
-//         </Route>
-//         <Route path="customers">
-//           <Route index element={<CustomersList />} />
-//           <Route path=":customerId" element={<CustomerDetails />} />
-//         </Route>
-//       </Route>
-//     </Routes>
-//   );

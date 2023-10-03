@@ -26,6 +26,7 @@ select {
   font-size: 1rem;
   font-family: "Space Mono";
 }
+
 /* Remove IE arrow */
 select::-ms-expand {
   display: none;

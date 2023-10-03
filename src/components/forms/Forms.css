@@ -70,3 +70,13 @@ input {
   align-self: center;
   padding: 0.3rem;
 }
+
+.save-btn:hover {
+  transition: 0.2s ease-in;
+  cursor: pointer;
+  text-shadow: white 0 0 15px;
+}
+
+.save-btn:not(:hover) {
+  transition: 0.2s ease-out;
+}

@@ -164,7 +164,7 @@ export const NewLocationForm = ({ currentUser }) => {
         </fieldset>
         <fieldset>
           <div className="loc-form-group">
-            <label htmlFor="bortle">Darkness rating:</label>
+            <label htmlFor="bortle">Light Level:</label>
             <input
               id="bortle"
               value={newLocation.bortle}
