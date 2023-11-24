@@ -1,7 +1,7 @@
 ![Dark Skies website header](/banner.png)
 ## Concept
 
-Dark Skies is a localized directory for stargazing locations, connecting users with verified dark sky reserves in their area.  The app uses multiple web API's to provide useful information including travel directions, local weather, and satellite flyovers.  Users can find the nearest spots, see how to get there, and what to expect (primarily in Tennessee and its surrounding states, as the database is still growing :)
+Dark Skies is a localized directory for stargazing locations, connecting users with verified dark sky reserves in their area.  The app uses multiple web API's, along with the user's location, to provide useful information including travel directions, local weather, and satellite flyovers.  Users can find the nearest spots, see how to get there, and what to expect (primarily in Tennessee and surrounding states, as the database is still growing :)
 
 ## Features
 
@@ -13,9 +13,10 @@ Dark Skies is a localized directory for stargazing locations, connecting users w
 - After sharing their location, users can see the local forecast or travel directions on any given location details page
 - With the Spot The Station widget, users can learn when and where exactly the International Space Station will next be flying over their location
 
+## Video Walkthrough
+
 ## ERD
 ![Dark Skies ERD](/darkskiesERD.png)
-## Video Walkthrough
 
 ## Testing Instructions
 1. Start a JSON server for the database, with the [instructions found here](https://github.com/LukeTHardy/dark-skies-api).
