@@ -17,7 +17,7 @@ Dark Skies is a localized directory for stargazing locations, connecting users w
 ## Video Walkthrough
 
 ## Testing Instructions
-1. Start a JSON server for the database following the [instructions found here](https://github.com/LukeTHardy/dark-skies-api)
+1. Start a JSON server for the database, with the [instructions found here](https://github.com/LukeTHardy/dark-skies-api).
 2. Clone this repo in your workspace:
 
    ```
