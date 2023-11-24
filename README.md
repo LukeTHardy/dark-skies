@@ -1,12 +1,12 @@
 # Dark Skies
-
+!(https://imgur.com/a/I6AP4xv)
 Dark Skies is a localized directory for stargazing locations, connecting users with verified dark sky reserves in their area.  The app uses multiple web API's to provide useful information including travel directions, local weather, and satellite flyovers.  Users can find the nearest spots, see how to get there, and what to expect (primarily in Tennessee and its surrounding states, as the database is still growing :)
 
 ## Features
 
 - Built on React.js and Javascript ES6, with full CRUD functionality
 - Users can filter locations by state OR search radius
-- Users can add their own locations to the directory with the Add Location form
+- Users can add their own locations to the directory with the New Location form
 - Users can edit or delete any location they have added
 - If a user wants to save a specific location, they can add and remove locations to their list of favorites
 - After sharing their location, users can see the local forecast or travel directions on any given location details page
