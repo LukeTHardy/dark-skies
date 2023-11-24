@@ -14,7 +14,7 @@ Dark Skies is a localized directory for stargazing locations, connecting users w
 - With the Spot The Station widget, users can learn when and where exactly the International Space Station will next be flying over their location
 
 ## Video Walkthrough
-
+Watch my [Loom demo here.](https://www.loom.com/share/81339ebb928f486b98d68cbf90a0966d?sid=08764dba-31e8-4fea-924e-62b57780486f) Enjoy!
 ## ERD
 ![Dark Skies ERD](/darkskiesERD.png)
 
