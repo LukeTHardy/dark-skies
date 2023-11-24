@@ -1,4 +1,3 @@
-# Dark Skies
 ![Dark Skies website header](/banner.png)
 ## Concept
 
