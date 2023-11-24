@@ -1,4 +1,4 @@
-![Dark Skies website header](/banner.png)
+![Dark Skies website header](/banner2.png)
 ## Concept
 
 Dark Skies is a localized directory for stargazing locations, connecting users with verified dark sky reserves in their area.  The app uses multiple web API's, along with the user's location, to provide useful information including travel directions, local weather, and satellite flyovers.  Users can find the nearest spots, see how to get there, and what to expect (primarily in Tennessee and surrounding states, as the database is still growing :)
