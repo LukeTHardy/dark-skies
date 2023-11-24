@@ -7,8 +7,8 @@ Dark Skies is a localized directory for stargazing locations, connecting users w
 - Built on React.js and Javascript ES6, with full CRUD functionality
 - Users can filter locations by state OR search radius
 - Users can add their own locations to the directory with the Add Location form
-- Users can edit or delete any location they have added to the directory
-- If a user wants to visit or just save a specific location, they can add and remove locations to their own list of favorites
+- Users can edit or delete any location they have added
+- If a user wants to save a specific location, they can add and remove locations to their list of favorites
 - After sharing their location, users can see the local forecast or travel directions on any given location details page
 - With the Spot The Station widget, users can learn when and where exactly the International Space Station will next be flying over their location
 
