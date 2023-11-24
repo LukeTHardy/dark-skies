@@ -1,71 +1,36 @@
-# Getting Started with Create React App
+# Dark Skies
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Dark Skies is a localized directory for stargazing locations, connecting users with verified dark sky reserves in their area.  The app uses multiple web API's to provide useful information including travel directions, local weather, and satellite flyovers.  Users can find the nearest spots, see how to get there, and what to expect (primarily in Tennessee and its surrounding states, as the database is still growing :)
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- Built on React.js and Javascript ES6, with full CRUD functionality
+- Users can filter locations by state OR search radius
+- Users can add their own locations to the directory with the Add Location form
+- Users can edit or delete any location they have added to the directory
+- If a user wants to visit or just save a specific location, they can add and remove locations to their own list of favorites
+- After sharing their location, users can see the local forecast or travel directions on any given location details page
+- With the Spot The Station widget, users can learn when and where exactly the International Space Station will next be flying over their location
 
-### `npm start`
+## ERD
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Video Walkthrough
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Testing Instructions
+1. Start a JSON server for the database following the [instructions found here](https://github.com/LukeTHardy/dark-skies-api)
+2. Clone this repo in your workspace:
 
-### `npm test`
+   ```
+   git clone git@github.com:LukeTHardy/dark-skies.git
+   ```
+3. Navigate to repo directory:
+   
+   ```
+   cd dark-skies
+   ```
+4. Install npm and start the app!
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# dark-skies
+   ```
+   npm install
+   npm start
+   ```
