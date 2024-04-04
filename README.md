@@ -30,9 +30,8 @@ Watch my [Loom demo here.](https://www.loom.com/share/81339ebb928f486b98d68cbf90
    ```
    cd dark-skies
    ```
-4. Install npm and start the app!
+4. Start the app!
 
    ```
-   npm install
    npm start
    ```
